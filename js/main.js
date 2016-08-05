@@ -1,13 +1,16 @@
 var original = "You used to call me on my cell-phone. Late night when you need my love. Call me on my cell-phone. Late night when you need my love. And I know when that hotline bling. That can only mean one thing. I know when that hotline bling. That can only mean one thing. Ever since I left the city. You got a reputation for yourself now. Everybody knows and I feel left out. Girl you got me down, you got me stressed out. 'Cause ever since I left the city, you started wearing less and goin' out more. Glasses of champagne out on the dance floor. Hangin' with some girls I've never seen before";
 
+// var original = "I don't want no scrub. A scrub is a guy that can't get no love from me. Hanging out the passenger side of his best friend's ride. Trying to holler at me. I don't want no scrub. A scrub is a guy that can't get no love from me. Hanging out the passenger side of his best friend's ride trying to holler at me";
+
 $("#newLyrics").hide();
 
 // Split into array of words
 original = original.split(/\s+/);
 
-var index = [3, 7, 8, 9, 15, 19, 20, 21, 29, 55, 57, 61, 97, 105, 108];
+// var index = [4, 9, 14, 17, 24, 27, 34, 44, ]
+var index = [7, 12, 14, 19, 24, 26, 33, 45, 57, 61, 76, 91, 93, 101];
 
-var input_names = [" verb", " noun", " adjective", " noun", " verb", " noun", " adjective", " noun", " verb", " verb (past tense)", " noun", " noun", " noun (plural)", " verb (ing)", " noun (plural)"];
+var input_names = [" noun", " verb", " noun", " noun", " verb", " noun", " verb", " verb", " noun", " noun", " verb(past tense)", " verb(ing)", " noun(plural)", " verb(-ing)"];
 
 var counter = 0;
 $("#type").text(input_names[counter]);
@@ -23,7 +26,7 @@ $("#submit_word").click(function(){
     counter++;
     $("#type").text(input_names[counter]); //works
     words.push($("#enter_word").val()); // is making arry
-    $("#enter_word").val("");
+    $("#enter_word").val("").css("color", "pink");
     console.log("This is words");
     console.log(words);
   }
